@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1.0">
+	<style>
+		.box{
+			background-color: white;
+			height: 50px;
+            width:140px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            border-radius: 20px;
+		}
+        .box_1{
+			background-color: white;
+			height: 50px;
+            width:140px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            border-radius: 20px;
+		}
+		.box a{
+			display: inline-block;
+			background-color: yellowgreen;
+			padding: 15px;
+			border-radius: 30px;
+		}
+        .box_1 a{
+			display: inline-block;
+			background-color: yellowgreen;
+			padding: 15px;
+			border-radius: 30px;
+            
+		}
+		.modal{
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: transparent;
+			transition: all 0.4s;
+			visibility: hidden;
+			opacity: 0;
+		}
+        .modal_1{
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: transparent;
+			transition: all 0.4s;
+			visibility: hidden;
+			opacity: 0;
+		}
+		.content{
+			position: absolute;
+			background: aquamarine;
+			width: 400px;
+			padding: 1em 2em;
+			border-radius: 4px;
+		}
+        .content_1{
+			position: absolute;
+			background: aquamarine;
+			width: 400px;
+			padding: 1em 2em;
+			border-radius: 4px;
+		}
+		.modal:target {
+			visibility: visible;
+			opacity: 1;
+		}
+        .modal_1:target {
+			visibility: visible;
+			opacity: 1;
+		}
+		.box-close {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			color: black;
+			text-decoration: none;
+			font-size: 30px;
+		}
+
+        .box-close_1{
+			position: absolute;
+			top: 0;
+			right: 15px;
+			color: black;
+			text-decoration: none;
+			font-size: 30px;
+		}
+	</style>
+</head>
+
+<body>
+    <div style="margin-top: 200px;width:300px;height:50px;border:1px solid black;">
+	<div class="box">
+		<a style="text-decoration: none;color:black;" href="#popup-box">
+			<b>Academic</b>
+		</a>
+	</div>
+	<div id="popup-box" class="modal">
+		<div class="content">
+          <pre>hey this is announcement tag
+            dont woryy we will update later
+          </pre>
+			<a href="#"
+			class="box-close">
+				<b> × </b>
+			</a>
+		</div>
+	</div>
+    </div>
+    <div style="margin-top: -51px;margin-left:150px;">
+        <div class="box_1">
+            <a style="text-decoration: none;color:black;" href="#popup-box_1">
+                <b>Enquiry</b>
+            </a>
+        </div>
+        <div id="popup-box_1" class="modal_1">
+            <div class="content_1">
+              <pre>hey this is announcement tag
+                dont woryy we will update later
+                soon we will meet
+                hai hai
+              </pre>
+                <a href="#"
+                class="box-close_1">
+                  <b>  × </b>
+
+                                    </a>
+            </div>
+        </div>
+        </div>
+</body>
+</html>

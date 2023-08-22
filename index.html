@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manasa School</title>
+    <link rel="stylesheet" href="css/slider_image.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      body {
+        background-image: url(images/nature_bg_1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        overflow-y: hidden;
+        font-family: Arial,sans-serif;
+      }
+
+      .mySlides{
+        display: none;
+      }
+      #main_div {
+        width: 1200px;
+        height: 850px;
+        border: 2px dashed black;
+        margin-left: 350px;
+        margin-top: 20px;
+        background-image: url(images/main-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border-radius: 25px;
+      }
+
+      #content_div {
+        width: 716px;
+        height: 740px;
+        border: 1px dotted black;
+        margin-left: 405px;
+        margin-top: -655px;
+        background-color: pink;
+      }
+      #home_content{
+        overflow-y: scroll;
+        width: 716px;
+        height: 740px;
+      }
+      #about_content{
+        overflow-y: scroll;
+        width: 716px;
+        height: 740px;
+      }
+      #gallery_content{
+        overflow-y: scroll;
+        width: 716px;
+        height: 740px;
+      }
+      #contact_content{
+        overflow-y: hidden;
+        overflow-x: hidden;
+        width: 716px;
+        height: 740px;
+      }
+      #login_content{
+        overflow-y: scroll;
+        width: 716px;
+        height: 740px;
+      }
+     
+     
+.head_content{
+	position: relative;
+}
+
+.head_content h2 {
+	color: black;
+	font-size: 3em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.head_content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 3px Green;
+}
+
+.head_content h2:nth-child(2) {
+	color: orange;/*#03a9f4*/
+	animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+.contact_form {
+    width: 340px;
+    height: 440px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+  }
+  
+  .ctct_input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+  }
+  .ctct_input:focus {
+    border-bottom: 2px solid #78788c;
+  }
+  .ctct_form_p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a;
+  }
+  .ctct_form_btn {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .ctct_form_btn:hover {
+    background: #78788c;
+    color: #fff;
+  }
+  
+
+  .log_form {
+    width: 340px;
+    height: 300px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+  }
+  
+  .log_input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+  }
+  .log_input:focus {
+    border-bottom: 2px solid #78788c;
+  }
+  .log_form_p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a;
+  }
+  .log_form_btn {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .log_form_btn:hover {
+    background: #78788c;
+    color: #fff;
+  }
+  
+  svg {
+    display: block;
+    font: 3em 'Montserrat';
+    width: 1560px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: green;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: blue;/*#4D163D*/
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+    stroke: #840037;/*#840037*/
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+    stroke: black;/*chocolate*/
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+    stroke: green;/*violet*/
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+    stroke: orangered;/*yellow*/
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+}
+
+.box{
+    background-color: pink;
+    height: 20px;
+    width:240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.box_1{
+    background-color: pink;
+    height: 20px;
+    width:240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.box a{
+    display: inline-block;
+    background-color: yellowgreen;
+    padding: 15px;
+    border-radius: 5px;
+}
+.box_1 a{
+    display: inline-block;
+    background-color: yellowgreen;
+    padding: 15px;
+    border-radius: 5px;
+    
+}
+.modal{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.modal_1{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.content{
+    position: absolute;
+    background: #c58c63;
+    width: 400px;
+    padding: 1em 2em;
+    border-radius: 4px;
+    margin-left: 300px;
+}
+.content_1{
+    position: absolute;
+    background: #c58c63;
+    width: 400px;
+    padding: 1em 2em;
+    border-radius: 4px;
+    margin-left: 300px;
+}
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+.modal_1:target {
+    visibility: visible;
+    opacity: 1;
+}
+.box-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.box-close_1{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+  
+    </style>
+  </head>
+  <body>
+    <div id="main_div">
+      <div
+        style="
+          width: 300px;
+          height: 400px;
+          margin-left: 82px;
+          margin-top: 300px;
+        "
+      >
+        <button
+          style="
+            width: 250px;
+            height: 50px;
+            background-image: url(images/btn_1.png);
+            margin-left: 50px;
+            background-repeat: no-repeat;
+          "
+        >
+          <a
+            style="text-decoration: none; font-size: 30px; color: black"
+            href="#home_content"
+            ><b>Home</b></a
+          >
+        </button>
+        <br /><br />
+        <button
+          style="
+            width: 250px;
+            height: 50px;
+            background-image: url(images/btn_2.png);
+            margin-left: 50px;
+            background-repeat: no-repeat;
+          "
+        >
+          <a
+            style="text-decoration: none; font-size: 30px; color: black"
+            href="#about_content"
+            ><b>About</b></a
+          >
+        </button>
+        <br /><br />
+        <button
+          style="
+            width: 250px;
+            height: 50px;
+            background-image: url(images/btn_3.png);
+            margin-left: 50px;
+            background-repeat: no-repeat;
+          "
+        >
+          <a
+            style="text-decoration: none; font-size: 30px; color: black"
+            href="#gallery_content"
+            ><b>Gallery</b></a
+          >
+        </button>
+        <br /><br />
+        <button
+          style="
+            width: 250px;
+            height: 50px;
+            background-image: url(images/btn_4.png);
+            margin-left: 50px;
+            background-repeat: no-repeat;
+          "
+        >
+          <a
+            style="text-decoration: none; font-size: 30px; color: black"
+            href="#contact_content"
+            ><b>Contact</b></a
+          >
+        </button>
+        <br /><br />
+        <button
+          style="
+            width: 250px;
+            height: 50px;
+            background-image: url(images/btn_5.png);
+            margin-left: 50px;
+            background-repeat: no-repeat;
+          "
+        >
+          <a
+            style="text-decoration: none; font-size: 30px; color: black"
+            href="#login_content"
+            ><b>Login</b></a
+          >
+        </button>
+      </div>
+
+      <div id="content_div" style="overflow-y: hidden;overflow-x:hidden;"> <!--start of main content-->
+        <div id="home_content" style="overflow-x: hidden;overflow-y:scroll;"> <!--start of home content-->
+            <!-- <div style="margin-left:200px;margin-top:10px;">
+                <div class="head_content">
+                    <h2><u>WELCOME</u></h2>
+                    <h2><u>WELCOME</u></h2>
+                </div>
+                <div style="margin-left:170px;" class="head_content">
+                    <h2><u>TO</u></h2>
+                    <h2><u>TO</u></h2>
+                </div>
+                <div style="margin-left:320px;" class="head_content">
+                    <h2><u>MANASA</u></h2>
+                    <h2><u>MANASA</u></h2>
+                </div>
+            </div> -->
+            <div style="margin-top: -10px; margin-left:-530px;">
+
+                <svg viewBox="0 0 960 300">
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="60%" y="20%">WELCOME TO MANASA</text>
+                    <text text-anchor="middle" x="60%" y="20%">WELCOME TO MANASA</text>
+                    
+                    </symbol>
+                
+                    <g class = "g-ants">
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                       
+                    </g>
+                </svg>
+                </div>
+
+           <div style="border: 0px solid black;width:350px;height:350px;margin-top:-230px;margin-left:320px;"><!--start of image slider-->
+             <div class="w3-content w3-section" style="width:400px;">   
+                <img class="mySlides" src="images/manasa_1.jpg" style="width:100%">
+                <img class="mySlides" src="images/manasa_2.jpg" style="width:100%">
+                <img class="mySlides" src="images/manasa_3.jpg" style="width:100%">
+
+                <script>
+                    var myIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                      var i;
+                      var x = document.getElementsByClassName("mySlides");
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                      }
+                      myIndex++;
+                      if (myIndex > x.length) {myIndex = 1}    
+                      x[myIndex-1].style.display = "block";  
+                      setTimeout(carousel, 2000); // Change image every 2 seconds
+                    }
+                </script>
+              </div><!--end of image slider-->
+<br>
+              <p style="width: 300px;height:200px;border:0px solid black;margin-left:-310px;margin-top:-160px;color:green;font-size:20px;text-align:center;"><b><i>"Education Is The Passport To The Future, For Tomorrow Belongs To Those Who Prepare For It Today."  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Malcolm X<br><br></i></b></p>
+
+              <pre style="width: 675px;height:330px;border:0px solid black;margin-left:-310px;margin-top:-50px;font-size:20px;">   <b>"Welcome to Manasa School - Nurturing Minds Since 1986!"</b>
+                 At Manasa School, we've been on an inspiring 
+journey of education and growth since our inception in 1986. 
+Backed by the esteemed Manasa Educational Trust, we have been
+fostering a legacy of excellence that has stood the test of 
+time.
+With a rich history spanning decades, we have consistently 
+provided top-tier education that goes beyond textbooks. Our 
+holistic approach combines academic rigor with character 
+development, creating well-rounded individuals who are poised 
+to make a meaningful impact in the world. </pre>
+
+
+<div style="margin-top: 50px;width:300px;height:50px;border:0px solid black;margin-left:-180px;">
+	<div class="box">
+		<a style="text-decoration: none;color:black;" href="#popup-box">
+			<b>Academic Report</b>
+		</a>
+	</div>
+	<div id="popup-box" class="modal">
+		<div class="content">
+          <pre><b>Hey this is academic report pop up
+we will update later</b>
+          </pre>
+			<a href="#"
+			class="box-close">
+				<b> × </b>
+			</a>
+		</div>
+	</div>
+    </div>
+    <div style="margin-top: -51px;margin-left:10px;">
+        <div class="box_1">
+            <a style="text-decoration: none;color:black;" href="#popup-box_1">
+                <b>Admission Form</b>
+            </a>
+        </div>
+        <div id="popup-box_1" class="modal_1">
+            <div class="content_1">
+                <pre><b>Hey this is Admission form section pop up
+we will update later</b>
+                              </pre>
+                <a href="#"
+                class="box-close_1">
+                  <b>  × </b>
+
+                                    </a>
+            </div>
+        </div>
+        
+        </div>
+
+        <pre style="width: 300px;height: 150px;border: 0px solid black;margin-top:80px;margin-left:-300px;font-size:20px;">
+<b><u>Address</u></b>
+<b>P.W.D QUATRES ROAD
+kanakapura,Ramnagara(Dist)
+Karnataka,India 
+Pincode : 562117
+Phone : 9964114107
+</b>
+        </pre>
+        <!-- <pre style="width: 200px;height: 200px;border: 1px solid black;margin-top:80px;margin-left:-300px;"></pre>
+        <br> -->
+        
+
+              <div>
+
+              </div>
+            </div>
+       
+        </div><!--end of home content-->
+        <div id="about_content"> <!--start of about content-->
+            <div style="margin-left:95px;margin-top:10px;">
+                <div class="head_content">
+                    <h2><u>ABOUT</u></h2>
+                    <h2><u>ABOUT</u></h2>
+                </div>
+            </div>            
+        </div><!--end of about content-->
+        <div id="gallery_content"><!--start of gallery content-->
+            <div style="margin-left:110px;margin-top:10px;">
+                <div class="head_content">
+                    <h2><u>GALLERY</u></h2>
+                    <h2><u>GALLERY</u></h2>
+                </div>
+            </div>
+        </div><!--end of gallery content-->
+        <div id="contact_content" style="overflow-x: hidden;"><!--start of contact content-->
+           
+            <div style="overflow-x: hidden;margin-top:-110px;">
+                <form class="contact_form">
+                  <p class="ctct_form_p" type="Name:"><input class="ctct_input" placeholder="Write your name here.."></input></p>
+                  <p class="ctct_form_p" type="Email:"><input class="ctct_input" placeholder="Let us know how to contact you back.."></input></p>
+                  <p class="ctct_form_p" type="Message:"><input class="ctct_input" placeholder="What would you like to tell us.."></input></p>
+                  <button class="ctct_form_btn">Send Message</button>
+                </form>
+              </div>
+        </div><!--end of contact content-->
+        <div id="login_content" style="overflow-y: hidden;overflow-x:hidden" ><!--start of login content-->
+            <p id="staff_log"></p>
+           <br>
+           
+
+            <div>
+                <div style="margin-top: -37px;">
+                    <form class="log_form">
+                      <p class="log_form_p" type="Email:"><input class="log_input" placeholder="Enter Your Email..." type="email"></input></p>
+                      <p class="log_form_p" type="Password:"><input class="log_input" placeholder="Enter Your Password..." type="password"></input></p>
+                      <button class="log_form_btn">SIGN IN</button>
+                      <button style="margin-right:175px;margin-top:-42.5px;" class="log_form_btn"><a href="#student_log" style="text-decoration: none;">STUDENT</a></button>
+                    </form>
+                  </div>
+            </div>
+
+<br><br><br><br>
+           
+<p id="student_log"></p>
+            <div>
+                <div>
+                    <form class="log_form">
+                      <p class="log_form_p" type="Email:"><input class="log_input" placeholder="Enter Your Email..." type="email"></input></p>
+                      <p class="log_form_p" type="Password:"><input class="log_input" placeholder="Enter Your Password..." type="password"></input></p>
+                      <button class="log_form_btn">SIGN IN</button>
+                      <button style="margin-right:202px;margin-top:-42.5px;" class="log_form_btn"><a href="#staff_log" style="text-decoration: none;">STAFF</a></button>
+                    </form>
+                  </div>
+            </div>
+
+   
+        </div><!--end of login content-->
+      </div> <!--end of main content-->
+    </div>
+  </body>
+</html>
